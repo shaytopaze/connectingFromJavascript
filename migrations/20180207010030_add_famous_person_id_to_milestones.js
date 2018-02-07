@@ -10,9 +10,9 @@ exports.up = function(knex, Promise) {
 
 exports.down = function(knex, Promise) {
   return Promise.all([
-  //   knex.schema.table('milestones', function(t){
-  //     t.dropForeign('famous_person_id')
-  //     t.dropColumn('famous_person_id')
-  // })
+    knex.schema.table('milestones', function(t){
+      t.dropForeign('famous_person_id')
+      t.dropColumn('famous_person_id')
+  })
   ])
 };
